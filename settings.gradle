@@ -2,10 +2,4 @@ rootProject.name = 'uranium'
 
 enableFeaturePreview("GRADLE_METADATA")
 
-include ':core'
-include ':swing'
-include ':swing-test'
-include ':web-canvas'
-include ':web-canvas:dom-api'
-include ':web-canvas-test-js'
-include ':web-canvas-test-wasm'
+include ':uranium-core'
