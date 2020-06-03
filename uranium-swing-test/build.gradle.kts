@@ -15,7 +15,7 @@ application {
 }
 
 dependencies {
-	implementation(project(":swing"))
+	implementation(project(":uranium-swing"))
 
 	implementation(kotlin("stdlib-jdk8"))
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
