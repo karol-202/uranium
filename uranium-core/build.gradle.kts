@@ -58,10 +58,36 @@ bintray {
 
     pkg(delegateClosureOf<PackageConfig> {
         repo = "uranium"
-        name = "uranium"
-        description = "Core package for uranium project"
+        name = "uranium-core"
+        description = "Core package for uranium library"
         vcsUrl = "https://github.com/karol-202/uranium"
         githubRepo = "karol-202/uranium"
         setLicenses("MIT")
     })
+}
+
+publishing {
+    publications.withType<MavenPublication>().all {
+        pom {
+            name.set(bintray.pkg.name)
+            description.set(bintray.pkg.desc)
+            url.set(bintray.pkg.vcsUrl)
+            licenses {
+                license {
+                    name.set("MIT")
+                    url.set("https://opensource.org/licenses/MIT")
+                }
+            }
+            developers {
+                developer {
+                    id.set("karol202")
+                    name.set("Karol Jurski")
+                    email.set("karoljurski1@gmail.com")
+                }
+            }
+            scm {
+                url.set(bintray.pkg.vcsUrl)
+            }
+        }
+    }
 }
