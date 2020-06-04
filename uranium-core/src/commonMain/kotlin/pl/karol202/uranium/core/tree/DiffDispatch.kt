@@ -69,7 +69,7 @@ private fun <N, P : UProps> NativeList<DispatchUnit<N, *>>.findCorrespondingUnit
 
 private fun <N> DispatchUnit<N, *>.isCorrespondingTo(unit: DispatchUnit<N, *>) = when
 {
-	propsClass !== unit.propsClass -> false
+	propsClass != unit.propsClass -> false
 	key === AutoKey -> unit.key === AutoKey // TODO Handle case of multiple AutoKeys in one component
 	else -> unit.key == key
 }

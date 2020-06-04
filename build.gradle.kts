@@ -1,6 +1,6 @@
 allprojects {
     group = "pl.karol202.uranium"
-    version = "0.1"
+    version = "0.2"
 
     repositories {
         jcenter()
