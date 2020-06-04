@@ -2,8 +2,8 @@ import com.jfrog.bintray.gradle.BintrayExtension.PackageConfig
 
 plugins {
     kotlin("multiplatform") version "1.3.72"
-    `maven-publish`
     id("com.jfrog.bintray") version "1.8.5"
+    `maven-publish`
 }
 
 kotlin {
