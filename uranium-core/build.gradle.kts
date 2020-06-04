@@ -1,6 +1,9 @@
+import com.jfrog.bintray.gradle.BintrayExtension.PackageConfig
+
 plugins {
     kotlin("multiplatform") version "1.3.72"
     `maven-publish`
+    id("com.jfrog.bintray") version "1.8.5"
 }
 
 kotlin {
@@ -45,4 +48,20 @@ kotlin {
             languageSettings.useExperimentalAnnotation("kotlin.ExperimentalStdlibApi")
 	    }
     }
+}
+
+bintray {
+    user = project.findProperty("bintray.user") as String?
+    key = project.findProperty("bintray.key") as String?
+    setPublications(*publishing.publications.names.toTypedArray())
+    publish = true
+
+    pkg(delegateClosureOf<PackageConfig> {
+        repo = "uranium"
+        name = "uranium"
+        description = "Core package for uranium project"
+        vcsUrl = "https://github.com/karol-202/uranium"
+        githubRepo = "karol-202/uranium"
+        setLicenses("MIT")
+    })
 }
