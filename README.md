@@ -7,16 +7,16 @@ https://bintray.com/karol202/uranium/uranium-core/_latestVersion
 https://opensource.org/licenses/MIT
 )
 
-Uranium is an universal, declarative UI library for Kotlin Multiplatform inspired by architecture of React.js.
-It allows you to create applications for various platforms using beautiful DSL in component-based manner.
+Uranium is an **universal, declarative UI library** for Kotlin Multiplatform inspired by architecture of React.js.
+It allows you to create applications for **various platforms** using beautiful **DSL** in component-based manner.
 
 ## Contents
-- [How to use?](#how-to-use)
+- [How to install?](#how-to-install)
 - [Why uranium?](#why-uranium)
 - [How does it work?](#how-does-it-work)
 - [Contributing](#contributing)
 
-## How to use?
+## How to install?
 
 This project acts only as a platform-agnostic core of the uranium library,
 and you probably don't want to use it directly (unless contributing to uranium)
@@ -54,6 +54,13 @@ Maven:
     <artifactId>uranium-core-jvm</artifactId>
     <version>0.2-2</version>
 </dependency>
+```
+
+Make sure that you have jCenter in your repositories `section`:
+```groovy
+repositories {
+    jcenter()
+}
 ```
 
 uranium-core comes in a few variants:
