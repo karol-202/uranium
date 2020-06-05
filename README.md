@@ -1,5 +1,8 @@
 # Uranium
 
+![Deployment](
+https://github.com/karol-202/uranium/workflows/Deployment/badge.svg
+)
 [ ![Download](https://api.bintray.com/packages/karol202/uranium/uranium-core/images/download.svg) ](
 https://bintray.com/karol202/uranium/uranium-core/_latestVersion
 )
@@ -36,14 +39,14 @@ you can gather it from [jCenter](https://bintray.com/karol202/uranium/uranium-co
 Gradle (Kotlin DSL):
 ```kotlin
 dependencies {
-    implementation("pl.karol202.uranium:uranium-core-jvm:0.2-2")
+    implementation("pl.karol202.uranium:uranium-core-jvm:0.2.1")
 }
 ```
 
 Gradle (Groovy):
 ```groovy
 dependencies {
-    implementation "pl.karol202.uranium:uranium-core-jvm:0.2-2"
+    implementation "pl.karol202.uranium:uranium-core-jvm:0.2.1"
 }
 ```
 
@@ -52,11 +55,11 @@ Maven:
 <dependency>
     <groupId>pl.karol202.uranium</groupId>
     <artifactId>uranium-core-jvm</artifactId>
-    <version>0.2-2</version>
+    <version>0.2.1</version>
 </dependency>
 ```
 
-Make sure that you have jCenter in your repositories `section`:
+Make sure you have jCenter in your `repositories` section:
 ```groovy
 repositories {
     jcenter()
@@ -70,7 +73,7 @@ useful when using in Kotlin Multiplatform project
 - `uranium-core-js` - JS (browser) artifact
 - `uranium-core-wasm32` - Kotlin/Native WebAssembly artifact
 
-Support for more platforms is planned, feel free to create an issue in case of need.
+Support for more Kotlin/Native platforms is planned, feel free to create an issue in case of need.
 
 ## Why uranium?
 

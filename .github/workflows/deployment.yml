@@ -1,4 +1,4 @@
-name: Automatic deployment
+name: Deployment
 
 on:
   release:
