@@ -1,0 +1,21 @@
+name: Automatic deployment
+
+on:
+  release:
+    types: [ created ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Setup JDK
+      uses: actions/setup-java@v1
+      
+    - name: Build and deploy to Bintray
+      env:
+        BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+        BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
+      run: ./gradlew publishAllPublicationsToMavenRepository

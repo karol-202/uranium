@@ -1,8 +1,5 @@
-import com.jfrog.bintray.gradle.BintrayExtension.PackageConfig
-
 plugins {
     kotlin("multiplatform") version "1.3.72"
-    id("com.jfrog.bintray") version "1.8.5"
     `maven-publish`
 }
 
@@ -50,28 +47,33 @@ kotlin {
     }
 }
 
-bintray {
-    user = project.findProperty("bintray.user") as String?
-    key = project.findProperty("bintray.key") as String?
-    setPublications(*publishing.publications.names.toTypedArray())
-    publish = true
-
-    pkg(delegateClosureOf<PackageConfig> {
-        repo = "uranium"
-        name = "uranium-core"
-        description = "Core package for uranium library"
-        vcsUrl = "https://github.com/karol-202/uranium"
-        githubRepo = "karol-202/uranium"
-        setLicenses("MIT")
-    })
+object Publish
+{
+    const val repo = "uranium"
+    const val name = "uranium-core"
+    const val description = "Core package for uranium library"
+    const val vcsUrl = "https://github.com/karol-202/uranium"
+    const val githubRepo = "karol-202/uranium"
 }
 
 publishing {
+    repositories {
+        val user = System.getenv("BINTRAY_USER")
+        val key = System.getenv("BINTRAY_KEY")
+
+        maven("https://api.bintray.com/maven/$user/${Publish.repo}/${Publish.name}/;publish=1") {
+            credentials {
+                username = user
+                password = key
+            }
+        }
+    }
+
     publications.withType<MavenPublication>().all {
         pom {
-            name.set(bintray.pkg.name)
-            description.set(bintray.pkg.desc)
-            url.set(bintray.pkg.vcsUrl)
+            name.set(Publish.name)
+            description.set(Publish.description)
+            url.set(Publish.vcsUrl)
             licenses {
                 license {
                     name.set("MIT")
@@ -86,7 +88,7 @@ publishing {
                 }
             }
             scm {
-                url.set(bintray.pkg.vcsUrl)
+                url.set(Publish.vcsUrl)
             }
         }
     }
