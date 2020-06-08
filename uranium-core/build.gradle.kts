@@ -47,13 +47,12 @@ kotlin {
     }
 }
 
-object Publish
+object Bintray
 {
     const val repo = "uranium"
     const val name = "uranium-core"
     const val description = "Core package for uranium library"
     const val vcsUrl = "https://github.com/karol-202/uranium"
-    const val githubRepo = "karol-202/uranium"
 }
 
 publishing {
@@ -61,7 +60,8 @@ publishing {
         val user = System.getenv("BINTRAY_USER")
         val key = System.getenv("BINTRAY_KEY")
 
-        maven("https://api.bintray.com/maven/$user/${Publish.repo}/${Publish.name}/;publish=1") {
+        maven("https://api.bintray.com/maven/$user/${Bintray.repo}/${Bintray.name}/;publish=1") {
+            name = "Bintray"
             credentials {
                 username = user
                 password = key
@@ -71,9 +71,9 @@ publishing {
 
     publications.withType<MavenPublication>().all {
         pom {
-            name.set(Publish.name)
-            description.set(Publish.description)
-            url.set(Publish.vcsUrl)
+            name.set(Bintray.name)
+            description.set(Bintray.description)
+            url.set(Bintray.vcsUrl)
             licenses {
                 license {
                     name.set("MIT")
@@ -88,7 +88,7 @@ publishing {
                 }
             }
             scm {
-                url.set(Publish.vcsUrl)
+                url.set(Bintray.vcsUrl)
             }
         }
     }
