@@ -3,6 +3,12 @@ package pl.karol202.uranium.core.util
 
 import kotlin.jvm.JvmName
 
+/**
+ * Collection wrapper, created because ArrayList in Kotlin/JS was too slow due to type checking.
+ * - on JVM, it uses ArrayList
+ * - in JS, it uses array
+ * - in Kotlin/Native it used ArrayList
+ */
 interface NativeList<out T> : Iterable<T>
 {
 	val size: Int

@@ -1,5 +1,11 @@
 package pl.karol202.uranium.core.util
 
+/**
+ * [PlusBuilder] allows to create a DSL with possibility
+ * of adding items or list of items to a builder using unary plus.
+ *
+ * @param T element type
+ */
 interface PlusBuilder<T>
 {
 	operator fun T.unaryPlus()
@@ -7,7 +13,7 @@ interface PlusBuilder<T>
 	operator fun List<T>.unaryPlus()
 }
 
-abstract class PlusBuilderImpl<T> : PlusBuilder<T>
+internal abstract class PlusBuilderImpl<T> : PlusBuilder<T>
 {
 	private val _elements = arrayListOf<T>()
 	val elements: List<T> = _elements

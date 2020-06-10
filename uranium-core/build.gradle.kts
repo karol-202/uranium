@@ -1,5 +1,8 @@
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     kotlin("multiplatform") version "1.3.72"
+    id("org.jetbrains.dokka") version "0.10.1"
     `maven-publish`
 }
 
@@ -44,6 +47,18 @@ kotlin {
 		    languageSettings.enableLanguageFeature("InlineClasses")
             languageSettings.useExperimentalAnnotation("kotlin.ExperimentalStdlibApi")
 	    }
+    }
+}
+
+tasks {
+    val dokka by getting(DokkaTask::class) {
+        outputDirectory = "$buildDir/dokka"
+
+        multiplatform {
+            val jvm by creating { }
+            val js by creating { }
+            val wasm32 by creating { }
+        }
     }
 }
 

@@ -8,6 +8,12 @@ import pl.karol202.uranium.core.util.StackTrace
 
 private const val MAX_BUFFER_SIZE = 64
 
+/**
+ * Creates a render scheduler that uses a queue to schedule rendering requests.
+ *
+ * @param queueSize maximal size of the queue
+ * @return created scheduler
+ */
 fun queueRenderScheduler(queueSize: Int = MAX_BUFFER_SIZE): RenderScheduler =
 		QueueRenderScheduler(CoroutineScope(Dispatchers.Main), queueSize)
 

@@ -151,7 +151,7 @@ class NameComponent(props: Props) : SwingAbstractAppComponent<NameComponent.Prop
 
 Above is a simple Swing component containing a text field and a label displaying value from the text field.
 
-For more details on how uranium works, go to the [wiki](https://github.com/karol-202/uranium/wiki).
+For more details on how uranium works, see documentation.
 
 ## Contributing
 

@@ -19,7 +19,8 @@ internal fun <N, P : UProps> UElement<N, P>.createNode(invalidateCallback: (Tree
 
 internal class TreeNode<N, P : UProps> internal constructor(private val component: UComponent<N, P>,
                                                             internal val propsClass: KClass<P>,
-                                                            private val invalidateCallback: (TreeNode<N, *>) -> Unit) : UKeyProvider
+                                                            private val invalidateCallback: (TreeNode<N, *>) -> Unit) :
+		UKeyProvider
 {
 	override val key get() = component.key
 	internal val props get() = component.props
