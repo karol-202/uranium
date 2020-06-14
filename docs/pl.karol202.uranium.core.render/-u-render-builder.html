@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.render.URenderBuilder - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="index.html">pl.karol202.uranium.core.render</a>&nbsp;/&nbsp;<a href="./-u-render-builder.html">URenderBuilder</a><br/>
+<br/>
+<h1>URenderBuilder</h1>
+<a name="pl.karol202.uranium.core.render.URenderBuilder"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">URenderBuilder</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.util/-plus-builder/index.html"><span class="identifier">PlusBuilder</span></a><span class="symbol">&lt;</span><a href="../pl.karol202.uranium.core.element/-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="-u-render-scope.html"><span class="identifier">URenderScope</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code>
+<p>Interface serving as a scope for <em>render builder functions</em>.
+<em>Render builder functions</em> allows to render any number of <a href="../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>s.
+<em>Render builder function</em> has <a href="-u-render-builder.html#pl.karol202.uranium.core.render.URenderBuilder">URenderBuilder</a> as receiver and returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>.
+<em>Render builder function</em> can have any number of arguments,
+but the issue from <a href="-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> applies.</p>
+<p>Because of <a href="-u-render-builder.html#pl.karol202.uranium.core.render.URenderBuilder">URenderBuilder</a> being a <a href="../pl.karol202.uranium.core.util/-plus-builder/index.html#pl.karol202.uranium.core.util.PlusBuilder">PlusBuilder</a>, having it as a receiver
+allows to add elements to the builder using unary plus:
+    + button(text = "My text")</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+</BODY>
+</HTML>

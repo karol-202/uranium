@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component.UAbstractComponent - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.component</a>&nbsp;/&nbsp;<a href="./index.html">UAbstractComponent</a><br/>
+<br/>
+<h1>UAbstractComponent</h1>
+<a name="pl.karol202.uranium.core.component.UAbstractComponent"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">UAbstractComponent</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-component/index.html"><span class="identifier">UComponent</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span></code>
+<p>Base implementation of <a href="../-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a>, that every component should implement directly or indirectly.</p>
+<p>Generally, inheritance of components should be avoided and composition should be used instead.
+One of the rare cases where components inheritance is allowed are basic platform components.
+Implementations of uranium for different platforms may differ for example in how many children
+components may a component have (one or unlimited) and which natives are allowed. So every
+platform implementation may define one or more base classes inheriting from <a href="index.html#pl.karol202.uranium.core.component.UAbstractComponent">UAbstractComponent</a>,
+that every component using the implementation should extend.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<p><a name="props"></a>
+<code>props</code> - initial props of the component</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Base implementation of <a href="../-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a>, that every component should implement directly or indirectly.</p>
+<code><span class="identifier">&lt;init&gt;</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.component.UAbstractComponent$<init>(pl.karol202.uranium.core.component.UAbstractComponent.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="props.html">props</a></h4>
+</td>
+<td>
+<p>Provided props</p>
+<code><span class="keyword">var </span><span class="identifier">props</span><span class="symbol">: </span><span class="identifier">P</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="create.html">create</a></h4>
+</td>
+<td>
+<p>Method called after instantiation of a component</p>
+<code><span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.component.UAbstractComponent$create(pl.karol202.uranium.core.component.ComponentContext)/context">context</span><span class="symbol">:</span>&nbsp;<a href="../-component-context/index.html"><span class="identifier">ComponentContext</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="destroy.html">destroy</a></h4>
+</td>
+<td>
+<p>Method called when a component is no longer used and is being detached from component hierarchy</p>
+<code><span class="keyword">fun </span><span class="identifier">destroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="invalidate.html">invalidate</a></h4>
+</td>
+<td>
+<p>Notifies that the component should be invalidated.
+Usually there is no need to call it directly.</p>
+<code><span class="keyword">fun </span><span class="identifier">invalidate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="modify-props-internal.html">modifyPropsInternal</a></h4>
+</td>
+<td>
+<p>Used internally to update component's props, do not call yourself!</p>
+<code><span class="keyword">fun </span><span class="identifier">modifyPropsInternal</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.component.UAbstractComponent$modifyPropsInternal(pl.karol202.uranium.core.component.UAbstractComponent.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="needs-update.html">needsUpdate</a></h4>
+</td>
+<td>
+<p>Called if props have been changes (instance comparision) to check
+whether <a href="../-u-component/render.html#pl.karol202.uranium.core.component.UComponent$render()">render</a> and <a href="../-u-component/on-update.html#pl.karol202.uranium.core.component.UComponent$onUpdate(pl.karol202.uranium.core.component.UComponent.P)">onUpdate</a> should be called</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">needsUpdate</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.component.UAbstractComponent$needsUpdate(pl.karol202.uranium.core.component.UAbstractComponent.P)/newProps">newProps</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="on-create.html">onCreate</a></h4>
+</td>
+<td>
+<p>Lifecycle method called after instantiation of a component.</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="on-destroy.html">onDestroy</a></h4>
+</td>
+<td>
+<p>Lifecycle method called when a component is no longer used and is being detached from component hierarchy</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

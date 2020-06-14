@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component.UComponent.render - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.component</a>&nbsp;/&nbsp;<a href="index.html">UComponent</a>&nbsp;/&nbsp;<a href="./render.html">render</a><br/>
+<br/>
+<h1>render</h1>
+<a name="pl.karol202.uranium.core.component.UComponent$render()"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">render</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="../../pl.karol202.uranium.core.element/-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Method used in rendering phase to construct component hierarchy.
+Called in one of the following cases:</p>
+<ul><li>the component has just been created and attached to hierarchy</li>
+<li>the component is root and its props have been changed by <a href="../../pl.karol202.uranium.core.manager/-render-manager/index.html#pl.karol202.uranium.core.manager.RenderManager">RenderManager</a></li>
+<li>props have been changed by parent, whose <a href="render.html#pl.karol202.uranium.core.component.UComponent$render()">render</a> has been called for one of these reasons
+and <a href="needs-update.html#pl.karol202.uranium.core.component.UComponent$needsUpdate(pl.karol202.uranium.core.component.UComponent.P)">needsUpdate</a> of this component returned true</li>
+<li>component has been invalidated, for example in case of state change</li>
+</ul>
+<p>Implementation of <a href="render.html#pl.karol202.uranium.core.component.UComponent$render()">render</a> method should be pure:</p>
+<ul><li>should not execute any side effects</li>
+<li>should always return the same result for given props</li>
+</ul>
+<p><strong>Return</strong><br/>
+list of <a href="../../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>, that will be used to instantiate children</p>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.common.UKeyProvider - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.common</a>&nbsp;/&nbsp;<a href="./index.html">UKeyProvider</a><br/>
+<br/>
+<h1>UKeyProvider</h1>
+<a name="pl.karol202.uranium.core.common.UKeyProvider"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">UKeyProvider</span></code>
+<p>Interface for classes that have a key (components, elements, etc.)</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="key.html">key</a></h4>
+</td>
+<td>
+<p>Provided key, can be of any type</p>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="../-u-props.html">UProps</a></h4>
+</td>
+<td>
+<p>Props are input data to components.
+<a href="../-u-props.html#pl.karol202.uranium.core.common.UProps">UProps</a> serves as a base interface for all props classes.
+All props classes must implement this interface.</p>
+<code><span class="keyword">interface </span><span class="identifier">UProps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UKeyProvider</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="../-u-props-provider/index.html">UPropsProvider</a></h4>
+</td>
+<td>
+<p>Interface for all classes that contains props (component, element, etc.)</p>
+<code><span class="keyword">interface </span><span class="identifier">UPropsProvider</span><span class="symbol">&lt;</span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UKeyProvider</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

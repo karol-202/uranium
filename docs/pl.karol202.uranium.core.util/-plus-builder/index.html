@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.util.PlusBuilder - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.util</a>&nbsp;/&nbsp;<a href="./index.html">PlusBuilder</a><br/>
+<br/>
+<h1>PlusBuilder</h1>
+<a name="pl.karol202.uranium.core.util.PlusBuilder"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">PlusBuilder</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code>
+<p><a href="index.html#pl.karol202.uranium.core.util.PlusBuilder">PlusBuilder</a> allows to create a DSL with possibility
+of adding items or list of items to a builder using unary plus.</p>
+<h3>Parameters</h3>
+<p><a name="T"></a>
+<code>T</code> - element type</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="unary-plus.html">unaryPlus</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">operator</span> <span class="keyword">fun </span><span class="identifier">T</span><span class="symbol">.</span><span class="identifier">unaryPlus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">abstract</span> <span class="keyword">operator</span> <span class="keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">unaryPlus</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="../../pl.karol202.uranium.core.render/-u-render-builder.html">URenderBuilder</a></h4>
+</td>
+<td>
+<p>Interface serving as a scope for <em>render builder functions</em>.
+<em>Render builder functions</em> allows to render any number of <a href="../../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>s.
+<em>Render builder function</em> has <a href="../../pl.karol202.uranium.core.render/-u-render-builder.html#pl.karol202.uranium.core.render.URenderBuilder">URenderBuilder</a> as receiver and returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>.
+<em>Render builder function</em> can have any number of arguments,
+but the issue from <a href="../../pl.karol202.uranium.core.render/-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> applies.</p>
+<code><span class="keyword">interface </span><span class="identifier">URenderBuilder</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">PlusBuilder</span></a><span class="symbol">&lt;</span><a href="../../pl.karol202.uranium.core.element/-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="../../pl.karol202.uranium.core.render/-u-render-scope.html"><span class="identifier">URenderScope</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

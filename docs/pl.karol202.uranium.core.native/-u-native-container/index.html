@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.native.UNativeContainer - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.native</a>&nbsp;/&nbsp;<a href="./index.html">UNativeContainer</a><br/>
+<br/>
+<h1>UNativeContainer</h1>
+<a name="pl.karol202.uranium.core.native.UNativeContainer"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">UNativeContainer</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-native.html"><span class="identifier">UNative</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code>
+<p><a href="index.html#pl.karol202.uranium.core.native.UNativeContainer">UNativeContainer</a> is a special <a href="../-u-native.html#pl.karol202.uranium.core.native.UNative">UNative</a> that itself can contain other natives (maybe native containers).</p>
+<p>On some platforms all natives implement <a href="index.html#pl.karol202.uranium.core.native.UNativeContainer">UNativeContainer</a> (for example Swing, where JComponents is used
+as by native objects and all JComponents are containers), and on other platforms this is not the case.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="attach.html">attach</a></h4>
+</td>
+<td>
+<p>Inserts given native as a child of this container at the given position
+and shifts all the natives at indexes greater or equal to <a href="attach.html#pl.karol202.uranium.core.native.UNativeContainer$attach(pl.karol202.uranium.core.native.UNative((pl.karol202.uranium.core.native.UNativeContainer.N)), kotlin.Int)/index">index</a> to the right.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">attach</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.native.UNativeContainer$attach(pl.karol202.uranium.core.native.UNative((pl.karol202.uranium.core.native.UNativeContainer.N)), kotlin.Int)/native">native</span><span class="symbol">:</span>&nbsp;<a href="../-u-native.html"><span class="identifier">UNative</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.native.UNativeContainer$attach(pl.karol202.uranium.core.native.UNative((pl.karol202.uranium.core.native.UNativeContainer.N)), kotlin.Int)/index">index</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="detach.html">detach</a></h4>
+</td>
+<td>
+<p>Removes given native from this container,
+and shifts all the natives at indexes greater than <a href="detach.html#pl.karol202.uranium.core.native.UNativeContainer$detach(pl.karol202.uranium.core.native.UNative((pl.karol202.uranium.core.native.UNativeContainer.N)))/native">native</a>'s index to the left.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">detach</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.native.UNativeContainer$detach(pl.karol202.uranium.core.native.UNative((pl.karol202.uranium.core.native.UNativeContainer.N)))/native">native</span><span class="symbol">:</span>&nbsp;<a href="../-u-native.html"><span class="identifier">UNative</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

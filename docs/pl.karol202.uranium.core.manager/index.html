@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.manager - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="./index.html">pl.karol202.uranium.core.manager</a><br/>
+<br/>
+<h2>Package pl.karol202.uranium.core.manager</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-render-manager/index.html">RenderManager</a></h4>
+</td>
+<td>
+<p>Class for managing the rendering and committing process of root component
+(as all the children components manage themselves at their own).</p>
+<code><span class="keyword">class </span><span class="identifier">RenderManager</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-render-scheduler/index.html">RenderScheduler</a></h4>
+</td>
+<td>
+<p><a href="-render-scheduler/index.html#pl.karol202.uranium.core.manager.RenderScheduler">RenderScheduler</a> schedules rendering request for future or instant execution.</p>
+<code><span class="keyword">interface </span><span class="identifier">RenderScheduler</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(wasm32) 
+<h4><a href="instant-render-scheduler.html">instantRenderScheduler</a></h4>
+</td>
+<td>
+<p>Creates a render scheduler that immediately executes all requests.
+Queue render scheduler could not be easily implemented because of lack of coroutines support for WASM.</p>
+<code><span class="keyword">fun </span><span class="identifier">instantRenderScheduler</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-render-scheduler/index.html"><span class="identifier">RenderScheduler</span></a></code></td>
+</tr>
+<tr>
+<td>
+(js, jvm) 
+<h4><a href="queue-render-scheduler.html">queueRenderScheduler</a></h4>
+</td>
+<td>
+<p>Creates a render scheduler that uses a queue to schedule rendering requests.</p>
+<code><span class="keyword">fun </span><span class="identifier">queueRenderScheduler</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.manager$queueRenderScheduler(kotlin.Int)/queueSize">queueSize</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;MAX_BUFFER_SIZE<span class="symbol">)</span><span class="symbol">: </span><a href="-render-scheduler/index.html"><span class="identifier">RenderScheduler</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

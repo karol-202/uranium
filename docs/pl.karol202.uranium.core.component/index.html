@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="./index.html">pl.karol202.uranium.core.component</a><br/>
+<br/>
+<h2>Package pl.karol202.uranium.core.component</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-component-context/index.html">ComponentContext</a></h4>
+</td>
+<td>
+<p>Context a component is used in, kept in order for the component to be able to inform
+about changes such as need of invalidation.</p>
+<code><span class="keyword">interface </span><span class="identifier">ComponentContext</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-abstract-component/index.html">UAbstractComponent</a></h4>
+</td>
+<td>
+<p>Base implementation of <a href="-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a>, that every component should implement directly or indirectly.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">UAbstractComponent</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-component/index.html"><span class="identifier">UComponent</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-component/index.html">UComponent</a></h4>
+</td>
+<td>
+<p>Components are basic building blocks for all <em>uranium</em> applications,
+they form a tree structure, every component can have any number of children component
+or may have no children.</p>
+<code><span class="keyword">interface </span><span class="identifier">UComponent</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props-provider/index.html"><span class="identifier">UPropsProvider</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

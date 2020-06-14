@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.util - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="./index.html">pl.karol202.uranium.core.util</a><br/>
+<br/>
+<h2>Package pl.karol202.uranium.core.util</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-native-list/index.html">NativeList</a></h4>
+</td>
+<td>
+<p>Collection wrapper, created because ArrayList in Kotlin/JS was too slow due to type checking.</p>
+<code><span class="keyword">interface </span><span class="identifier">NativeList</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html"><span class="identifier">Iterable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-plus-builder/index.html">PlusBuilder</a></h4>
+</td>
+<td>
+<p><a href="-plus-builder/index.html#pl.karol202.uranium.core.util.PlusBuilder">PlusBuilder</a> allows to create a DSL with possibility
+of adding items or list of items to a builder using unary plus.</p>
+<code><span class="keyword">interface </span><span class="identifier">PlusBuilder</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Extensions for External Classes</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="kotlin.collections.-iterable/index.html">kotlin.collections.Iterable</a></h4>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="empty-native-list.html">emptyNativeList</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">emptyNativeList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="-native-list/index.html"><span class="identifier">NativeList</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="native-list-of.html">nativeListOf</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">nativeListOf</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="pl.karol202.uranium.core.util$nativeListOf(kotlin.Array((pl.karol202.uranium.core.util.nativeListOf.T)))/elements">elements</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="-native-list/index.html"><span class="identifier">NativeList</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="removed.html">removed</a></h4>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-native-list/index.html"><span class="identifier">NativeList</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">removed</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.util$removed(pl.karol202.uranium.core.util.NativeList((pl.karol202.uranium.core.util.removed.T)), pl.karol202.uranium.core.util.removed.T)/element">element</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="-native-list/index.html"><span class="identifier">NativeList</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

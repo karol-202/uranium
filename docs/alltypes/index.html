@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-auto-key.html">pl.karol202.uranium.core.common.AutoKey</a></h5>
+<p>Object that can be used as component's key and should be always used as default key
+if no other key is specified. The component dispatching algorithm should
+automatically determine identity between components with <a href="../pl.karol202.uranium.core.common/-auto-key.html#pl.karol202.uranium.core.common.AutoKey">AutoKey</a> used as key.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-basic-props/index.html">pl.karol202.uranium.core.common.BasicProps</a></h5>
+<p>Basic props implementation for simplest cases, where only a key is needed.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.component/-component-context/index.html">pl.karol202.uranium.core.component.ComponentContext</a></h5>
+<p>Context a component is used in, kept in order for the component to be able to inform
+about changes such as need of invalidation.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32)  (extensions in package pl.karol202.uranium.core.render)
+<h5><a href="../pl.karol202.uranium.core.render/kotlin.-function1/index.html">kotlin.Function1</a></h5>
+</tr>
+<tr>
+(common, js, jvm, wasm32)  (extensions in package pl.karol202.uranium.core.render)
+<h5><a href="../pl.karol202.uranium.core.render/kotlin.-function2/index.html">kotlin.Function2</a></h5>
+</tr>
+<tr>
+(common, js, jvm, wasm32)  (extensions in package pl.karol202.uranium.core.render)
+<h5><a href="../pl.karol202.uranium.core.render/kotlin.-function3/index.html">kotlin.Function3</a></h5>
+</tr>
+<tr>
+(common, js, jvm, wasm32)  (extensions in package pl.karol202.uranium.core.render)
+<h5><a href="../pl.karol202.uranium.core.render/kotlin.-function4/index.html">kotlin.Function4</a></h5>
+</tr>
+<tr>
+(common, js, jvm, wasm32)  (extensions in package pl.karol202.uranium.core.util)
+<h5><a href="../pl.karol202.uranium.core.util/kotlin.collections.-iterable/index.html">kotlin.collections.Iterable</a></h5>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.util/-native-list/index.html">pl.karol202.uranium.core.util.NativeList</a></h5>
+<p>Collection wrapper, created because ArrayList in Kotlin/JS was too slow due to type checking.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.util/-plus-builder/index.html">pl.karol202.uranium.core.util.PlusBuilder</a></h5>
+<p><a href="../pl.karol202.uranium.core.util/-plus-builder/index.html#pl.karol202.uranium.core.util.PlusBuilder">PlusBuilder</a> allows to create a DSL with possibility
+of adding items or list of items to a builder using unary plus.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.render/-render-dsl/index.html">pl.karol202.uranium.core.render.RenderDsl</a></h5>
+<p>Annotation for marking classes related to creating the rendering DSL.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.manager/-render-manager/index.html">pl.karol202.uranium.core.manager.RenderManager</a></h5>
+<p>Class for managing the rendering and committing process of root component
+(as all the children components manage themselves at their own).</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.manager/-render-scheduler/index.html">pl.karol202.uranium.core.manager.RenderScheduler</a></h5>
+<p><a href="../pl.karol202.uranium.core.manager/-render-scheduler/index.html#pl.karol202.uranium.core.manager.RenderScheduler">RenderScheduler</a> schedules rendering request for future or instant execution.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.component/-u-abstract-component/index.html">pl.karol202.uranium.core.component.UAbstractComponent</a></h5>
+<p>Base implementation of <a href="../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a>, that every component should implement directly or indirectly.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.component/-u-component/index.html">pl.karol202.uranium.core.component.UComponent</a></h5>
+<p>Components are basic building blocks for all <em>uranium</em> applications,
+they form a tree structure, every component can have any number of children component
+or may have no children.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.element/-u-element/index.html">pl.karol202.uranium.core.element.UElement</a></h5>
+<p><a href="../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a> objects are lightweight information about component that will be created.
+Elements are returned by <a href="../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a> render methods to construct component hierarchy.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-u-key-provider/index.html">pl.karol202.uranium.core.common.UKeyProvider</a></h5>
+<p>Interface for classes that have a key (components, elements, etc.)</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.native/-u-native.html">pl.karol202.uranium.core.native.UNative</a></h5>
+<p>Native is an object referring to platform's entity such as view, control or DOM node.
+Tree of natives is a final result of committing phase.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.native/-u-native-container/index.html">pl.karol202.uranium.core.native.UNativeContainer</a></h5>
+<p><a href="../pl.karol202.uranium.core.native/-u-native-container/index.html#pl.karol202.uranium.core.native.UNativeContainer">UNativeContainer</a> is a special <a href="../pl.karol202.uranium.core.native/-u-native.html#pl.karol202.uranium.core.native.UNative">UNative</a> that itself can contain other natives (maybe native containers).</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-u-props.html">pl.karol202.uranium.core.common.UProps</a></h5>
+<p>Props are input data to components.
+<a href="../pl.karol202.uranium.core.common/-u-props.html#pl.karol202.uranium.core.common.UProps">UProps</a> serves as a base interface for all props classes.
+All props classes must implement this interface.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-u-props-provider/index.html">pl.karol202.uranium.core.common.UPropsProvider</a></h5>
+<p>Interface for all classes that contains props (component, element, etc.)</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.render/-u-render-builder.html">pl.karol202.uranium.core.render.URenderBuilder</a></h5>
+<p>Interface serving as a scope for <em>render builder functions</em>.
+<em>Render builder functions</em> allows to render any number of <a href="../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>s.
+<em>Render builder function</em> has <a href="../pl.karol202.uranium.core.render/-u-render-builder.html#pl.karol202.uranium.core.render.URenderBuilder">URenderBuilder</a> as receiver and returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>.
+<em>Render builder function</em> can have any number of arguments,
+but the issue from <a href="../pl.karol202.uranium.core.render/-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> applies.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.render/-u-render-scope.html">pl.karol202.uranium.core.render.URenderScope</a></h5>
+<p>Interface serving no other purpose than serving as a scope for all rendering DSLs.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-u-state.html">pl.karol202.uranium.core.common.UState</a></h5>
+<p><a href="../pl.karol202.uranium.core.common/-u-state.html#pl.karol202.uranium.core.common.UState">UState</a> serves as a base interface that all state classes should implement.</p>
+</tr>
+<tr>
+(common, js, jvm, wasm32) 
+<h5><a href="../pl.karol202.uranium.core.common/-u-stateful/index.html">pl.karol202.uranium.core.common.UStateful</a></h5>
+<p>Interface that a component should implement to have its own state.</p>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

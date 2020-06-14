@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.native.UNative - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="index.html">pl.karol202.uranium.core.native</a>&nbsp;/&nbsp;<a href="./-u-native.html">UNative</a><br/>
+<br/>
+<h1>UNative</h1>
+<a name="pl.karol202.uranium.core.native.UNative"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">UNative</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code>
+<p>Native is an object referring to platform's entity such as view, control or DOM node.
+Tree of natives is a final result of committing phase.</p>
+<p><a href="-u-native.html#pl.karol202.uranium.core.native.UNative">UNative</a> is an interface, that all natives must implement.
+Every platform implementation has to have its own natives implementations.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-native-container/index.html">UNativeContainer</a></h4>
+</td>
+<td>
+<p><a href="-u-native-container/index.html#pl.karol202.uranium.core.native.UNativeContainer">UNativeContainer</a> is a special <a href="-u-native.html#pl.karol202.uranium.core.native.UNative">UNative</a> that itself can contain other natives (maybe native containers).</p>
+<code><span class="keyword">interface </span><span class="identifier">UNativeContainer</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./-u-native.html"><span class="identifier">UNative</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
