@@ -8,7 +8,7 @@ package pl.karol202.uranium.core.common
  * Currently (0.2.3 version) parent component can specify only one child component using [AutoKey].
  * In case of using multiple components with [AutoKey] next to each other,
  * an error is reported by the dispatching algorithm.
- * This is a critical issue, thus expected to be fixed soon. See issue #1
+ * This is a critical issue, thus expected to be fixed soon. See issue [#1](https://github.com/karol-202/uranium/issues/1)
  */
 object AutoKey
 

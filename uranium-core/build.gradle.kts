@@ -55,6 +55,7 @@ tasks {
         outputDirectory = "$buildDir/dokka"
 
         multiplatform {
+            val common by creating { }
             val jvm by creating { }
             val js by creating { }
             val wasm32 by creating { }

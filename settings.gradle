@@ -3,3 +3,4 @@ rootProject.name = 'uranium'
 enableFeaturePreview("GRADLE_METADATA")
 
 include ':uranium-core'
+include ':site'
