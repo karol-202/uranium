@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component.ComponentContext - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.component</a>&nbsp;/&nbsp;<a href="./index.html">ComponentContext</a><br/>
+<br/>
+<h1>ComponentContext</h1>
+<a name="pl.karol202.uranium.core.component.ComponentContext"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">ComponentContext</span></code>
+<p>Context a component is used in, kept in order for the component to be able to inform
+about changes such as need of invalidation.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="invalidate.html">invalidate</a></h4>
+</td>
+<td>
+<p>Notifies that component should be invalidated, for example in case of state change.
+Should not be used directly by end user.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">invalidate</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

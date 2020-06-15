@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.render.URenderScope - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="index.html">pl.karol202.uranium.core.render</a>&nbsp;/&nbsp;<a href="./-u-render-scope.html">URenderScope</a><br/>
+<br/>
+<h1>URenderScope</h1>
+<a name="pl.karol202.uranium.core.render.URenderScope"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">URenderScope</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code>
+<p>Interface serving no other purpose than serving as a scope for all rendering DSLs.</p>
+<p>All component-creating functions should use this interface as a receiver.
+The purpose of this principle is not to clutter namespace with tons of component related functions.</p>
+<p><a href="-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> is also used as receiver of <em>render functions</em>.
+<em>Render function</em> is a function with <a href="-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> as receiver and returning single <a href="../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>.
+<em>Render functions</em> can have any number of arguments, but currently (0.2.3) there are
+only 4 variants of <a href="kotlin.-function1/render.html">render</a> functions: for 0, 1, 2 or 3 arguments.
+If you need a <em>render function</em> with more than 3 arguments,
+you can write it yourself or file an issue in uranium project.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-render-builder.html">URenderBuilder</a></h4>
+</td>
+<td>
+<p>Interface serving as a scope for <em>render builder functions</em>.
+<em>Render builder functions</em> allows to render any number of <a href="../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a>s.
+<em>Render builder function</em> has <a href="-u-render-builder.html#pl.karol202.uranium.core.render.URenderBuilder">URenderBuilder</a> as receiver and returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>.
+<em>Render builder function</em> can have any number of arguments,
+but the issue from <a href="-u-render-scope.html#pl.karol202.uranium.core.render.URenderScope">URenderScope</a> applies.</p>
+<code><span class="keyword">interface </span><span class="identifier">URenderBuilder</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.util/-plus-builder/index.html"><span class="identifier">PlusBuilder</span></a><span class="symbol">&lt;</span><a href="../pl.karol202.uranium.core.element/-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="./-u-render-scope.html"><span class="identifier">URenderScope</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

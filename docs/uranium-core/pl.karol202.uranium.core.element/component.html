@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.element.component - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="index.html">pl.karol202.uranium.core.element</a>&nbsp;/&nbsp;<a href="./component.html">component</a><br/>
+<br/>
+<h1>component</h1>
+<a name="pl.karol202.uranium.core.element$component(pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.element.component.N)), kotlin.Function1((pl.karol202.uranium.core.element.component.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.component.N, )))), pl.karol202.uranium.core.element.component.P)"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="keyword">reified</span>&nbsp;<span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span> <a href="../pl.karol202.uranium.core.render/-u-render-scope.html"><span class="identifier">URenderScope</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">component</span><span class="symbol">(</span><span class="keyword">noinline</span> <span class="identifier" id="pl.karol202.uranium.core.element$component(pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.element.component.N)), kotlin.Function1((pl.karol202.uranium.core.element.component.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.component.N, )))), pl.karol202.uranium.core.element.component.P)/constructor">constructor</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">P</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../pl.karol202.uranium.core.component/-u-component/index.html"><span class="identifier">UComponent</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.element$component(pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.element.component.N)), kotlin.Function1((pl.karol202.uranium.core.element.component.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.component.N, )))), pl.karol202.uranium.core.element.component.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span></code>
+<p>Function returning element from given constructor and props.
+Can be used to implement component-creating functions.
+Component-creating functions can be created for all components to simplify the process of
+creating components hierarchy.</p>
+<p>For example a following function:
+    fun SampleRenderScope.button(key: Any = AutoKey, text: String = "Default") =
+        component(::SampleButton, SampleButton.Props(key, text))
+can be used in render function:
+    + button(text = "My text")
+instead of:
+    + UElement(::SampleButton, SampleButton.Props(AutoKey, "My text"), SampleButton.Props::class)</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<p><a name="constructor"></a>
+<code>constructor</code> - function returning a new component with given props</p>
+<p><a name="props"></a>
+<code>props</code> - props that will be used to construct the component</p>
+<p><strong>Return</strong><br/>
+created <a href="-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a></p>
+</BODY>
+</HTML>

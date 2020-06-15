@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.common.UStateful - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.common</a>&nbsp;/&nbsp;<a href="./index.html">UStateful</a><br/>
+<br/>
+<h1>UStateful</h1>
+<a name="pl.karol202.uranium.core.common.UStateful"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">UStateful</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-state.html"><span class="identifier">UState</span></a><span class="symbol">&gt;</span></code>
+<p>Interface that a component should implement to have its own state.</p>
+<h3>Parameters</h3>
+<p><a name="S"></a>
+<code>S</code> - concrete type of state class</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="state.html">state</a></h4>
+</td>
+<td>
+<p>Current state of the component.
+Should be implemented by using delegating to value returned by <a href="../state.html#pl.karol202.uranium.core.common$state(pl.karol202.uranium.core.component.UAbstractComponent((kotlin.Any, pl.karol202.uranium.core.common.UProps)), pl.karol202.uranium.core.common.state.S)">state</a>.</p>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">state</span><span class="symbol">: </span><span class="identifier">S</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

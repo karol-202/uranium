@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.manager.RenderManager - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.manager</a>&nbsp;/&nbsp;<a href="./index.html">RenderManager</a><br/>
+<br/>
+<h1>RenderManager</h1>
+<a name="pl.karol202.uranium.core.manager.RenderManager"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">class </span><span class="identifier">RenderManager</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span></code>
+<p>Class for managing the rendering and committing process of root component
+(as all the children components manage themselves at their own).</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<p><a name="element"></a>
+<code>element</code> - element used to create root component</p>
+<p><a name="container"></a>
+<code>container</code> - native container that will contain natives generated (in committing phase) from the root component</p>
+<p><a name="scheduler"></a>
+<code>scheduler</code> - <a href="../-render-scheduler/index.html#pl.karol202.uranium.core.manager.RenderScheduler">RenderScheduler</a> used to schedule render requests</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Class for managing the rendering and committing process of root component
+(as all the children components manage themselves at their own).</p>
+<code><span class="identifier">&lt;init&gt;</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.manager.RenderManager$<init>(pl.karol202.uranium.core.element.UElement((pl.karol202.uranium.core.manager.RenderManager.N, pl.karol202.uranium.core.manager.RenderManager.P)), pl.karol202.uranium.core.native.UNativeContainer((pl.karol202.uranium.core.manager.RenderManager.N)), pl.karol202.uranium.core.manager.RenderScheduler)/element">element</span><span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.element/-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.manager.RenderManager$<init>(pl.karol202.uranium.core.element.UElement((pl.karol202.uranium.core.manager.RenderManager.N, pl.karol202.uranium.core.manager.RenderManager.P)), pl.karol202.uranium.core.native.UNativeContainer((pl.karol202.uranium.core.manager.RenderManager.N)), pl.karol202.uranium.core.manager.RenderScheduler)/container">container</span><span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.native/-u-native-container/index.html"><span class="identifier">UNativeContainer</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.manager.RenderManager$<init>(pl.karol202.uranium.core.element.UElement((pl.karol202.uranium.core.manager.RenderManager.N, pl.karol202.uranium.core.manager.RenderManager.P)), pl.karol202.uranium.core.native.UNativeContainer((pl.karol202.uranium.core.manager.RenderManager.N)), pl.karol202.uranium.core.manager.RenderScheduler)/scheduler">scheduler</span><span class="symbol">:</span>&nbsp;<a href="../-render-scheduler/index.html"><span class="identifier">RenderScheduler</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="init.html">init</a></h4>
+</td>
+<td>
+<p>Initializes the root component (and all the children recursively),
+then commits changes to the natives hierarchy.</p>
+<code><span class="keyword">fun </span><span class="identifier">init</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="reuse.html">reuse</a></h4>
+</td>
+<td>
+<p>Provides new props for the root component (leading to possible rerender),
+then commits changes to the natives hierarchy.</p>
+<code><span class="keyword">fun </span><span class="identifier">reuse</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.manager.RenderManager$reuse(pl.karol202.uranium.core.manager.RenderManager.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="schedule-init.html">scheduleInit</a></h4>
+</td>
+<td>
+<p>Schedules a init request to be executed by scheduler.</p>
+<code><span class="keyword">fun </span><span class="identifier">scheduleInit</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="schedule-reuse.html">scheduleReuse</a></h4>
+</td>
+<td>
+<p>Schedules a props change request to be executed by scheduler.</p>
+<code><span class="keyword">fun </span><span class="identifier">scheduleReuse</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.manager.RenderManager$scheduleReuse(pl.karol202.uranium.core.manager.RenderManager.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

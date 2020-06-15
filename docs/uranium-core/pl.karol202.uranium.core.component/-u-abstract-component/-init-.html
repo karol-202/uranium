@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component.UAbstractComponent.<init> - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.component</a>&nbsp;/&nbsp;<a href="index.html">UAbstractComponent</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="pl.karol202.uranium.core.component.UAbstractComponent$&lt;init&gt;(pl.karol202.uranium.core.component.UAbstractComponent.P)"></a>
+(common, js, jvm, wasm32) <code><span class="identifier">&lt;init&gt;</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.component.UAbstractComponent$<init>(pl.karol202.uranium.core.component.UAbstractComponent.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span></code>
+<p>Base implementation of <a href="../-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a>, that every component should implement directly or indirectly.</p>
+<p>Generally, inheritance of components should be avoided and composition should be used instead.
+One of the rare cases where components inheritance is allowed are basic platform components.
+Implementations of uranium for different platforms may differ for example in how many children
+components may a component have (one or unlimited) and which natives are allowed. So every
+platform implementation may define one or more base classes inheriting from <a href="index.html#pl.karol202.uranium.core.component.UAbstractComponent">UAbstractComponent</a>,
+that every component using the implementation should extend.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<p><a name="props"></a>
+<code>props</code> - initial props of the component</p>
+</BODY>
+</HTML>

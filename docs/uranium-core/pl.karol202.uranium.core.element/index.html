@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.element - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="./index.html">pl.karol202.uranium.core.element</a><br/>
+<br/>
+<h2>Package pl.karol202.uranium.core.element</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-element/index.html">UElement</a></h4>
+</td>
+<td>
+<p><a href="-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a> objects are lightweight information about component that will be created.
+Elements are returned by <a href="../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a> render methods to construct component hierarchy.</p>
+<code><span class="keyword">class </span><span class="identifier">UElement</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props-provider/index.html"><span class="identifier">UPropsProvider</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="component.html">component</a></h4>
+</td>
+<td>
+<p>Function returning element from given constructor and props.
+Can be used to implement component-creating functions.
+Component-creating functions can be created for all components to simplify the process of
+creating components hierarchy.</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span> <a href="../pl.karol202.uranium.core.render/-u-render-scope.html"><span class="identifier">URenderScope</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">component</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.element$component(pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.element.component.N)), kotlin.Function1((pl.karol202.uranium.core.element.component.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.component.N, )))), pl.karol202.uranium.core.element.component.P)/constructor">constructor</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">P</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../pl.karol202.uranium.core.component/-u-component/index.html"><span class="identifier">UComponent</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.element$component(pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.element.component.N)), kotlin.Function1((pl.karol202.uranium.core.element.component.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.component.N, )))), pl.karol202.uranium.core.element.component.P)/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="-u-element/index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

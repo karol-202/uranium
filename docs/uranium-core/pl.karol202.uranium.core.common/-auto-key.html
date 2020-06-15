@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.common.AutoKey - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="index.html">pl.karol202.uranium.core.common</a>&nbsp;/&nbsp;<a href="./-auto-key.html">AutoKey</a><br/>
+<br/>
+<h1>AutoKey</h1>
+<a name="pl.karol202.uranium.core.common.AutoKey"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">object </span><span class="identifier">AutoKey</span></code>
+<p>Object that can be used as component's key and should be always used as default key
+if no other key is specified. The component dispatching algorithm should
+automatically determine identity between components with <a href="-auto-key.html#pl.karol202.uranium.core.common.AutoKey">AutoKey</a> used as key.</p>
+<p>Currently (0.2.3 version) parent component can specify only one child component using <a href="-auto-key.html#pl.karol202.uranium.core.common.AutoKey">AutoKey</a>.
+In case of using multiple components with <a href="-auto-key.html#pl.karol202.uranium.core.common.AutoKey">AutoKey</a> next to each other,
+an error is reported by the dispatching algorithm.
+This is a critical issue, thus expected to be fixed soon. See issue <a href="https://github.com/karol-202/uranium/issues/1">#1</a></p>
+</BODY>
+</HTML>

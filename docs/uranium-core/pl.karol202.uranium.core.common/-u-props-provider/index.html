@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.common.UPropsProvider - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.common</a>&nbsp;/&nbsp;<a href="./index.html">UPropsProvider</a><br/>
+<br/>
+<h1>UPropsProvider</h1>
+<a name="pl.karol202.uranium.core.common.UPropsProvider"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">interface </span><span class="identifier">UPropsProvider</span><span class="symbol">&lt;</span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-key-provider/index.html"><span class="identifier">UKeyProvider</span></a></code>
+<p>Interface for all classes that contains props (component, element, etc.)</p>
+<h3>Parameters</h3>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="key.html">key</a></h4>
+</td>
+<td>
+<p>Key provided by the props</p>
+<code><span class="keyword">open</span> <span class="keyword">val </span><span class="identifier">key</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="props.html">props</a></h4>
+</td>
+<td>
+<p>Provided props</p>
+<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">props</span><span class="symbol">: </span><span class="identifier">P</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="../../pl.karol202.uranium.core.component/-u-component/index.html">UComponent</a></h4>
+</td>
+<td>
+<p>Components are basic building blocks for all <em>uranium</em> applications,
+they form a tree structure, every component can have any number of children component
+or may have no children.</p>
+<code><span class="keyword">interface </span><span class="identifier">UComponent</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UPropsProvider</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="../../pl.karol202.uranium.core.element/-u-element/index.html">UElement</a></h4>
+</td>
+<td>
+<p><a href="../../pl.karol202.uranium.core.element/-u-element/index.html#pl.karol202.uranium.core.element.UElement">UElement</a> objects are lightweight information about component that will be created.
+Elements are returned by <a href="../../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a> render methods to construct component hierarchy.</p>
+<code><span class="keyword">class </span><span class="identifier">UElement</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">UPropsProvider</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

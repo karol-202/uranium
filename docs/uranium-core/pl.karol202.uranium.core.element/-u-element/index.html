@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.element.UElement - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.element</a>&nbsp;/&nbsp;<a href="./index.html">UElement</a><br/>
+<br/>
+<h1>UElement</h1>
+<a name="pl.karol202.uranium.core.element.UElement"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">class </span><span class="identifier">UElement</span><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">, </span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.common/-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../../pl.karol202.uranium.core.common/-u-props-provider/index.html"><span class="identifier">UPropsProvider</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span></code>
+<p><a href="index.html#pl.karol202.uranium.core.element.UElement">UElement</a> objects are lightweight information about component that will be created.
+Elements are returned by <a href="../../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a> render methods to construct component hierarchy.</p>
+<h3>Parameters</h3>
+<p><a name="N"></a>
+<code>N</code> - native marker</p>
+<p><a name="P"></a>
+<code>P</code> - props type</p>
+<p><a name="constructor"></a>
+<code>constructor</code> - function returning a new component with given props</p>
+<p><a name="props"></a>
+<code>props</code> - props that will be used to construct the component</p>
+<p><a name="propsClass"></a>
+<code>propsClass</code> - props type, used internally for component dispatching</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p><a href="index.html#pl.karol202.uranium.core.element.UElement">UElement</a> objects are lightweight information about component that will be created.
+Elements are returned by <a href="../../pl.karol202.uranium.core.component/-u-component/index.html#pl.karol202.uranium.core.component.UComponent">UComponent</a> render methods to construct component hierarchy.</p>
+<code><span class="identifier">&lt;init&gt;</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.element.UElement$<init>(kotlin.Function1((pl.karol202.uranium.core.element.UElement.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.UElement.N, )))), pl.karol202.uranium.core.element.UElement.P, kotlin.reflect.KClass((pl.karol202.uranium.core.element.UElement.P)))/constructor">constructor</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="identifier">P</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../../pl.karol202.uranium.core.component/-u-component/index.html"><span class="identifier">UComponent</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.element.UElement$<init>(kotlin.Function1((pl.karol202.uranium.core.element.UElement.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.UElement.N, )))), pl.karol202.uranium.core.element.UElement.P, kotlin.reflect.KClass((pl.karol202.uranium.core.element.UElement.P)))/props">props</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">, </span><span class="identifier" id="pl.karol202.uranium.core.element.UElement$<init>(kotlin.Function1((pl.karol202.uranium.core.element.UElement.P, pl.karol202.uranium.core.component.UComponent((pl.karol202.uranium.core.element.UElement.N, )))), pl.karol202.uranium.core.element.UElement.P, kotlin.reflect.KClass((pl.karol202.uranium.core.element.UElement.P)))/propsClass">propsClass</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span class="symbol">&lt;</span><span class="identifier">P</span><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="props.html">props</a></h4>
+</td>
+<td>
+<p>props that will be used to construct the component</p>
+<code><span class="keyword">val </span><span class="identifier">props</span><span class="symbol">: </span><span class="identifier">P</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="with-props.html">withProps</a></h4>
+</td>
+<td>
+<p>Returns new element with props returned by builder function</p>
+<code><span class="keyword">fun </span><span class="identifier">withProps</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.element.UElement$withProps(kotlin.Function1((pl.karol202.uranium.core.element.UElement.P, )))/propsBuilder">propsBuilder</span><span class="symbol">:</span>&nbsp;<span class="identifier">P</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">P</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">UElement</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">,</span>&nbsp;<span class="identifier">P</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

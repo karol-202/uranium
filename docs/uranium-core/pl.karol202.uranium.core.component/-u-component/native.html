@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.component.UComponent.native - uranium-core</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="../index.html">pl.karol202.uranium.core.component</a>&nbsp;/&nbsp;<a href="index.html">UComponent</a>&nbsp;/&nbsp;<a href="./native.html">native</a><br/>
+<br/>
+<h1>native</h1>
+<a name="pl.karol202.uranium.core.component.UComponent$native"></a>
+(common, js, jvm, wasm32) <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">native</span><span class="symbol">: </span><a href="../../pl.karol202.uranium.core.native/-u-native.html"><span class="identifier">UNative</span></a><span class="symbol">&lt;</span><span class="identifier">N</span><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Property returning <a href="../../pl.karol202.uranium.core.native/-u-native.html#pl.karol202.uranium.core.native.UNative">UNative</a> of this component or null.</p>
+<p>Component can provide native (object referring to platform's view/control/component)
+that will be used in place of the component in committing phase.
+If no native provided, natives of children component (or their children recursively
+in case of lack of natives) will be used in committing phase.</p>
+<p>For example following hierarchy of components:</p>
+<pre><code>                  Component
+
+                (with native)
+
+                  /        \
+
+            Component      Component
+
+           (no native)   (with native)
+
+            /        \
+
+    Component        Component</code></pre>
+<p>(with native)    (with native)</p>
+<pre><code>         |
+
+      Component
+
+    (with native)</code></pre>
+<p>will be transformed to the following hierarchy of natives:</p>
+<pre><code>        Native
+
+    /     |     \</code></pre>
+<p>Native   Native   Native</p>
+<pre><code>       |
+
+    Native</code></pre>
+</BODY>
+</HTML>

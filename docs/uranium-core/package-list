@@ -1,0 +1,18 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function1((pl.karol202.uranium.core.render.URenderBuilder((pl.karol202.uranium.core.render.render.N)), kotlin.Unit)))pl.karol202.uranium.core.render/kotlin.-function1/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function1((pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.element.UElement((, pl.karol202.uranium.core.common.UProps)))))pl.karol202.uranium.core.render/kotlin.-function1/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function2((pl.karol202.uranium.core.render.URenderBuilder((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, kotlin.Unit)), pl.karol202.uranium.core.render.render.A1)pl.karol202.uranium.core.render/kotlin.-function2/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function2((pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.element.UElement((, pl.karol202.uranium.core.common.UProps)))), pl.karol202.uranium.core.render.render.A1)pl.karol202.uranium.core.render/kotlin.-function2/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function3((pl.karol202.uranium.core.render.URenderBuilder((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, kotlin.Unit)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2)pl.karol202.uranium.core.render/kotlin.-function3/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function3((pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, pl.karol202.uranium.core.element.UElement((, pl.karol202.uranium.core.common.UProps)))), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2)pl.karol202.uranium.core.render/kotlin.-function3/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function4((pl.karol202.uranium.core.render.URenderBuilder((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, pl.karol202.uranium.core.render.render.A3, kotlin.Unit)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, pl.karol202.uranium.core.render.render.A3)pl.karol202.uranium.core.render/kotlin.-function4/render.html
+$dokka.location:pl.karol202.uranium.core.render$render(kotlin.Function4((pl.karol202.uranium.core.render.URenderScope((pl.karol202.uranium.core.render.render.N)), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, pl.karol202.uranium.core.render.render.A3, pl.karol202.uranium.core.element.UElement((, pl.karol202.uranium.core.common.UProps)))), pl.karol202.uranium.core.render.render.A1, pl.karol202.uranium.core.render.render.A2, pl.karol202.uranium.core.render.render.A3)pl.karol202.uranium.core.render/kotlin.-function4/render.html
+$dokka.location:pl.karol202.uranium.core.util$toNativeList(kotlin.collections.Iterable((pl.karol202.uranium.core.util.toNativeList.T)))pl.karol202.uranium.core.util/kotlin.collections.-iterable/to-native-list.html
+pl.karol202.uranium.core.common
+pl.karol202.uranium.core.component
+pl.karol202.uranium.core.element
+pl.karol202.uranium.core.manager
+pl.karol202.uranium.core.native
+pl.karol202.uranium.core.render
+pl.karol202.uranium.core.util

@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>pl.karol202.uranium.core.common - uranium-core</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">uranium-core</a>&nbsp;/&nbsp;<a href="./index.html">pl.karol202.uranium.core.common</a><br/>
+<br/>
+<h2>Package pl.karol202.uranium.core.common</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-auto-key.html">AutoKey</a></h4>
+</td>
+<td>
+<p>Object that can be used as component's key and should be always used as default key
+if no other key is specified. The component dispatching algorithm should
+automatically determine identity between components with <a href="-auto-key.html#pl.karol202.uranium.core.common.AutoKey">AutoKey</a> used as key.</p>
+<code><span class="keyword">object </span><span class="identifier">AutoKey</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-basic-props/index.html">BasicProps</a></h4>
+</td>
+<td>
+<p>Basic props implementation for simplest cases, where only a key is needed.</p>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">BasicProps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-props.html"><span class="identifier">UProps</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-key-provider/index.html">UKeyProvider</a></h4>
+</td>
+<td>
+<p>Interface for classes that have a key (components, elements, etc.)</p>
+<code><span class="keyword">interface </span><span class="identifier">UKeyProvider</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-props.html">UProps</a></h4>
+</td>
+<td>
+<p>Props are input data to components.
+<a href="-u-props.html#pl.karol202.uranium.core.common.UProps">UProps</a> serves as a base interface for all props classes.
+All props classes must implement this interface.</p>
+<code><span class="keyword">interface </span><span class="identifier">UProps</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-key-provider/index.html"><span class="identifier">UKeyProvider</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-props-provider/index.html">UPropsProvider</a></h4>
+</td>
+<td>
+<p>Interface for all classes that contains props (component, element, etc.)</p>
+<code><span class="keyword">interface </span><span class="identifier">UPropsProvider</span><span class="symbol">&lt;</span><span class="identifier">P</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-props.html"><span class="identifier">UProps</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-key-provider/index.html"><span class="identifier">UKeyProvider</span></a></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-state.html">UState</a></h4>
+</td>
+<td>
+<p><a href="-u-state.html#pl.karol202.uranium.core.common.UState">UState</a> serves as a base interface that all state classes should implement.</p>
+<code><span class="keyword">interface </span><span class="identifier">UState</span></code></td>
+</tr>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="-u-stateful/index.html">UStateful</a></h4>
+</td>
+<td>
+<p>Interface that a component should implement to have its own state.</p>
+<code><span class="keyword">interface </span><span class="identifier">UStateful</span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-state.html"><span class="identifier">UState</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(common, js, jvm, wasm32) 
+<h4><a href="set-state.html">setState</a></h4>
+</td>
+<td>
+<p>Allows to change component's state by using a builder method
+with receiver being the initial state (before change)</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-state.html"><span class="identifier">UState</span></a><span class="symbol">&gt;</span> <a href="-u-stateful/index.html"><span class="identifier">UStateful</span></a><span class="symbol">&lt;</span><span class="identifier">S</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">setState</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.common$setState(pl.karol202.uranium.core.common.UStateful((pl.karol202.uranium.core.common.setState.S)), kotlin.Function1((pl.karol202.uranium.core.common.setState.S, )))/builder">builder</span><span class="symbol">:</span>&nbsp;<span class="identifier">S</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">S</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="state.html">state</a></h4>
+</td>
+<td>
+<p>Method returning delegate to be used to implement state property of <a href="-u-stateful/index.html#pl.karol202.uranium.core.common.UStateful">UStateful</a>.
+When using this delegate a component is automatically invalidated on state changes.</p>
+(common, js, jvm) <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-state.html"><span class="identifier">UState</span></a><span class="symbol">&gt;</span> <a href="../pl.karol202.uranium.core.component/-u-abstract-component/index.html"><span class="identifier">UAbstractComponent</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">state</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.common$state(pl.karol202.uranium.core.component.UAbstractComponent((kotlin.Any, pl.karol202.uranium.core.common.UProps)), pl.karol202.uranium.core.common.state.S)/initialState">initialState</span><span class="symbol">:</span>&nbsp;<span class="identifier">S</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.properties/-read-write-property/index.html"><span class="identifier">ReadWriteProperty</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">S</span><span class="symbol">&gt;</span></code><br/>
+(wasm32) <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">S</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-u-state.html"><span class="identifier">UState</span></a><span class="symbol">&gt;</span> <a href="../pl.karol202.uranium.core.component/-u-abstract-component/index.html"><span class="identifier">UAbstractComponent</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">state</span><span class="symbol">(</span><span class="identifier" id="pl.karol202.uranium.core.common$state(pl.karol202.uranium.core.component.UAbstractComponent((kotlin.Any, pl.karol202.uranium.core.common.UProps)), pl.karol202.uranium.core.common.state.S)/initialState">initialState</span><span class="symbol">:</span>&nbsp;<span class="identifier">S</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
