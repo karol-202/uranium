@@ -13,7 +13,13 @@ interface PlusBuilder<T>
 	operator fun List<T>.unaryPlus()
 }
 
-internal abstract class PlusBuilderImpl<T> : PlusBuilder<T>
+/**
+ * [PlusBuilder] implementation serving as a base class
+ * for creating PlusBuilders for custom scope types.
+ *
+ * @param T element type
+ */
+abstract class PlusBuilderImpl<T> : PlusBuilder<T>
 {
 	private val _elements = arrayListOf<T>()
 	val elements: List<T> = _elements

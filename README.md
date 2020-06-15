@@ -39,14 +39,14 @@ you can gather it from [jCenter](https://bintray.com/karol202/uranium/uranium-co
 Gradle (Kotlin DSL):
 ```kotlin
 dependencies {
-    implementation("pl.karol202.uranium.core:uranium-core-jvm:0.2.4")
+    implementation("pl.karol202.uranium.core:uranium-core-jvm:0.2.5")
 }
 ```
 
 Gradle (Groovy):
 ```groovy
 dependencies {
-    implementation "pl.karol202.uranium.core:uranium-core-jvm:0.2.4"
+    implementation "pl.karol202.uranium.core:uranium-core-jvm:0.2.5"
 }
 ```
 
@@ -55,7 +55,7 @@ Maven:
 <dependency>
     <groupId>pl.karol202.uranium.core</groupId>
     <artifactId>uranium-core-jvm</artifactId>
-    <version>0.2.4</version>
+    <version>0.2.5</version>
 </dependency>
 ```
 
